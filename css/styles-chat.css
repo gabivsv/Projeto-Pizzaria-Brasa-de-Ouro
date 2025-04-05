@@ -1,0 +1,169 @@
+/* Fundo claro, semelhante ao WhatsApp */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5ddd5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contêiner do chat - tamanho maior e bordas arredondadas */
+#chat-container {
+    width: 100%;
+    max-width: 450px;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ddd;
+}
+
+/* Área do chat */
+#chat-box {
+    width: 100%; /* Largura total da área, mas com limites definidos em max-width */
+    max-width: 500px; /* Define um tamanho máximo para o chat */
+    height: auto; /* Ajusta a altura automaticamente conforme o conteúdo */
+    max-height: 400px; /* Limita a altura máxima do chat */
+    overflow-y: auto; /* Permite a rolagem vertical se o conteúdo for maior que o permitido */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    word-wrap: break-word; /* Quebra o texto que ultrapassar o limite da largura */
+    word-break: break-word; /* Quebra palavras longas sem espaços */
+    margin: 0 auto; /* Centraliza o chat horizontalmente */
+}
+
+/* Estilizando a barra de rolagem para ficar mais discreta */
+#chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chat-box::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+/* Estiliza o botão de voltar */
+.back-button-container {
+    text-align: center; /* Centraliza o botão */
+    margin-bottom: 10px; /* Espaço abaixo do botão */
+    margin-top: 20px; /* Adiciona espaço no topo para não ficar colado ao topo da página */
+}
+
+.back-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.back-button:hover {
+    background-color: #444;
+}
+
+/* Cabeçalho do chatbot - título fixo e destacado */
+#chat-header {
+    background-color: #19a44cb9;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Estilo das mensagens do chat */
+.message {
+    max-width: 80%; /* Define um tamanho máximo para as mensagens */
+    word-wrap: break-word; /* Faz o texto quebrar para não esticar a caixa */
+    white-space: pre-line; /* Mantém as quebras de linha e organiza o texto */
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: 1.4;
+    overflow-wrap: break-word; /* Garante que palavras muito grandes também quebrem */
+}
+
+/* Mensagem do usuário - verde claro no canto direito */
+.user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    text-align: right;
+    color: #333;
+}
+
+/* Mensagem do bot - cinza claro no canto esquerdo */
+.bot-message {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+    text-align: left;
+    color: #333;
+}
+
+/* Área de entrada de texto - maior e com bordas arredondadas */
+#input-container {
+    display: flex;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    position: relative;
+    height: 60px; /* Tamanho fixo do campo de digitação */
+}
+
+/* Campo de entrada - maior e mais confortável */
+#user-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Botão de envio - simples e funcional */
+#send-button {
+    padding: 12px;
+    background-color: #25d366;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    transition: background 0.3s;
+}
+
+#send-button:hover {
+    background-color: #1ebe5d;
+}
+
+/* Ícone de envio dentro do botão */
+#send-button::after {
+    content: '➤';
+    font-size: 18px;
+}
