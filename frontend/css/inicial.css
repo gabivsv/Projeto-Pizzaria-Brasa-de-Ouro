@@ -8,7 +8,7 @@
 }
   
 body {
-    background-image: url('../img/plano_de_fundo.png'); 
+    background-image: url(../img/plano_de_fundo.png); 
     background-size: cover; 
     background-position: center; 
     background-attachment: fixed; 

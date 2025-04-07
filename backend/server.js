@@ -3,15 +3,15 @@ const cors = require('cors'); // Importando o pacote cors
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
-// Habilitando o CORS para aceitar requisições de qualquer origem
-app.use(cors()); // Agora, todas as requisições externas serão permitidas
+// Habilitando o CORS
+app.use(cors());
 
-// Definindo o middleware para lidar com o corpo da requisição como JSON
+// Middleware para JSON
 app.use(express.json());
 
-// Respostas para cada opção
+// Respostas do chatbot
 const pizzaInfo = {
     "1": "Nosso cardápio inclui: Margherita, Calabresa, Frango com Catupiry, Quatro Queijos e muito mais! Gostaria de saber mais sobre alguma pizza específica?",
     "2": "A pizzaria foi fundada em 2005. Quer saber mais sobre nossa história?",
@@ -25,22 +25,21 @@ const pizzaInfo = {
     "10": "Nossa pizzaria fica na Rua da Pizza, 123, Centro. Estamos esperando você! Precisa de mais informações sobre nossa localização?"
 };
 
-// Endpoint para receber a mensagem e responder
+// Endpoint do chatbot
 app.post('/chatbot', (req, res) => {
     const userMessage = req.body.message;
-
-    // Responde de acordo com a opção escolhida
     const botResponse = pizzaInfo[userMessage] || "Desculpe, não entendi. Por favor, escolha uma das opções disponíveis.";
-
-    // Envia a resposta de volta ao frontend
     res.json({ response: botResponse });
 });
 
-// Rota para garantir que o backend está funcionando
-app.use(cors());
-app.use(express.static('../frontend'))
+// Servir arquivos estáticos (index.html, style.css, script.js, etc)
+app.use(express.static(path.join(__dirname, '../frontend')));
 
-// Inicia o servidor na porta 3000
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
+// Rota principal
+res.sendFile(path.join(__dirname, '../frontend/index.html'));
+
+
+// Inicia o servidor
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
