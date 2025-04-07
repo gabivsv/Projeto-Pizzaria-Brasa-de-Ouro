@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors'); // Importando o pacote cors
+const path = require('path');
+
 const app = express();
 const port = 3000;
 
@@ -35,9 +37,8 @@ app.post('/chatbot', (req, res) => {
 });
 
 // Rota para garantir que o backend está funcionando
-app.get('/', (req, res) => {
-    res.send('Servidor backend rodando em http://localhost:3000');
-});
+app.use(cors());
+app.use(express.static('../frontend'))
 
 // Inicia o servidor na porta 3000
 app.listen(port, () => {
