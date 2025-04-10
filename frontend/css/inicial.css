@@ -41,29 +41,91 @@ body {
     position: fixed;
     bottom: 60px;
     right: 30px;
-    font-size: 30px;
-    background-color: #01e675;
-    color: #FFF;
+    width: 60px;
+    height: 60px;
+    background-color: #8b771a;
     border-radius: 50%;
-    padding: 8px;
-    width: 50px;
-    height: 50px;
     text-align: center;
     text-decoration: none;
     z-index: 100;
     box-shadow: 2px 2px 2px #c0bdbd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; 
 }
+
 
 .icon .fab{
     padding-top: 9px;
 }
 
 .icon:hover{
-    background-color: #FFF;
-    color: #029e3b;
+    background-color: #fff3cd;
     font-weight: 900;
-    box-shadow: 2px 2px 20px #5fe690;
+    box-shadow: 2px 2px 20px #ffdf8c;
 }
+
+.icon-img {
+    margin-bottom: 32px;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.buttonchatbot {
+    position: fixed;
+    bottom: 70px;
+    right: 80px;
+    z-index: 100;
+}
+
+.bot-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.message {
+    position: absolute;
+    bottom: 70px; /* distância do balão até o botão */
+    background-color: #66080b;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 101;
+    animation: fadeSlideIn 0.6s ease forwards;
+}
+
+.message::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* ajusta para ficar na borda inferior */
+    left: 70px; /* posiciona horizontalmente */
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #66080b; /* cor do balão */
+}
+
+@keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  
 
 /*CABEÇALHO*/
 
