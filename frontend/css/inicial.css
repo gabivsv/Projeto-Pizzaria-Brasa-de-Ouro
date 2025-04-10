@@ -89,7 +89,7 @@ body {
   
 .message {
     position: absolute;
-    bottom: 70px; /* distância do balão até o botão */
+    bottom: 70px; 
     background-color: #66080b;
     color: #fff;
     padding: 4px 8px;
@@ -104,13 +104,13 @@ body {
 .message::after {
     content: '';
     position: absolute;
-    bottom: -8px; /* ajusta para ficar na borda inferior */
-    left: 70px; /* posiciona horizontalmente */
+    bottom: -8px; 
+    left: 70px; 
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 8px solid #66080b; /* cor do balão */
+    border-top: 8px solid #66080b; 
 }
 
 @keyframes fadeSlideIn {
