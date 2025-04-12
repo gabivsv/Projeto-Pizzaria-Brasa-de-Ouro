@@ -61,6 +61,11 @@ dialog::backdrop {
   flex-direction: column;
   align-items: center;
 }
+
+.modal-header .form-title {
+  text-align: center;
+  width: 100%;
+}
   
 .form-title {
     margin-top: 35px;
@@ -127,9 +132,12 @@ dialog::backdrop {
     font-size: 0.875rem;
     line-height: 1.25rem;
     text-align: center;
+    padding: 10px 16px;
 }
   
 .signup-link a {
+    color: #0400ff;
+    margin: 4px;
     text-decoration: underline;
 }
 
@@ -151,6 +159,21 @@ dialog::backdrop {
   vertical-align: middle;
 }
 
+.remember{
+  font-size: 0.9rem;
+  margin: 5px;
+  color: #555;
+  display: flex;
+  margin: 0.5rem 0;
+  gap: 0.5rem;
+}
+
+.remember input[type="checkbox"] {
+  accent-color: #ff5500;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
 
 /*ANIMAÇÃO*/
 dialog[open] {

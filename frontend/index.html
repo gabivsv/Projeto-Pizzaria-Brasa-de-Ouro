@@ -21,6 +21,7 @@
     
     <link rel="stylesheet" href="css/inicial.css">
     <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/login.css">
 
     <title>Pizzaria Brasa D'Ouro</title>
 </head>
@@ -49,8 +50,7 @@
         </div><!--btn-icons-->
 
         <dialog id="modal-1">
-            
-        
+            <!--CARRINHO DE COMPRAS-->
         </dialog>
 
         <dialog id="modal-2">
@@ -65,31 +65,59 @@
 
                 <div class="modal-body">
                     <div class="input-container">
-                        <input type="text" name="nome" placeholder="Nome completo" required>
+                        <input type="text" name="nome" placeholder="Nome completo:" required>
                     </div>
                 
                     <div class="input-container">
-                        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+                        <input type="email" name="email" placeholder="Seu melhor e-mail:" required>
                     </div>
                 
                     <div class="input-container">
-                        <input type="password" id="password" name="senha" placeholder="Crie uma senha segura" required minlength="6">
+                        <input type="password" id="password" name="senha" placeholder="Crie uma senha segura:" required minlength="6">
                     </div>
                 
                     <div class="input-container">
-                        <input type="password" id="confirm" name="confirmaSenha" placeholder="Confirme sua senha" required minlength="6">
+                        <input type="password" id="confirm" name="confirmaSenha" placeholder="Confirme sua senha:" required minlength="6">
                     </div>
                     
                     <p id="errorPassword" class="error-message">
                         <i class="bi bi-exclamation-circle-fill"></i> As senhas devem ser iguais!
                     </p>
                     
-
                 </div>
             
                 <button type="submit" class="submit">CADASTRE-SE</button>
             
-                <p class="signup-link">Já tem uma conta?<a href="#">Entre aqui</a></p>
+                <p class="signup-link">Já tem uma conta?<a href="#" id="link-login">Entre aqui</a></p>
+            </form>
+        </dialog>
+
+        <dialog id="modal-login">
+            <form>
+                <div class="modal-header">
+                    <p class="form-title">Bem-vindo de volta! 😄</p>
+
+                    <button class="close-modal" type="button" data-modal="modal-login">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="input-container">
+                        <input type="email" name="email" placeholder="Digite seu e-mail:" required>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="password" name="password" placeholder="Digite sua senha:" required>
+                    </div>
+
+                    <label class="remember">
+                        <input type="checkbox" name="remember"> Manter-me conectado.
+                    </label>                      
+                </div>
+
+                <button type="submit" class="submit">ENTRAR</button>
+                <p class="signup-link">Ainda não tem uma conta?<a href="#" id="link-register">Cadastre-se</a></p>
             </form>
         </dialog>
            
@@ -363,6 +391,7 @@
     </footer>
     
     <script src="js/swiper.js"></script>
+    <script src="js/login.js"></script>
     <script src="js/register.js"></script>
 </body>
 </html>
