@@ -6,7 +6,7 @@ O projeto foi criado como prática de desenvolvimento web, com o objetivo de apl
 
 ## 📸 Demonstração
 
-![Capa da Pizzaria Brasa d'Ouro](docs/capa-pizzaria.png)
+![Capa da Pizzaria Brasa d'Ouro](mockup-brasa-douro.png)
 
 Acesse a aplicação publicada:
 
