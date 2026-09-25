@@ -27,7 +27,7 @@ A aplicação está organizada em duas partes principais:
 - `frontend/` — páginas, estilos, scripts e recursos visuais da interface;
 - `backend/` — servidor Express e endpoint responsável pelas respostas do chatbot.
 
-  ## 📍 Status do projeto
+## 📍 Status do projeto
 
 O projeto está **em construção e evolução contínua**.
 
@@ -163,8 +163,8 @@ http://localhost:3000
 
 O projeto foi desenvolvido inicialmente em colaboração entre:
 
-- [Gabriela Vieira](https://github.com/gabivsv ) — desenvolvimento do frontend, interface visual e continuidade do projeto;
-- Thalisson Freitas da Silva — desenvolvimento inicial do chatbot e do backend.
+- [@gabivsv](https://github.com/gabivsv ) — desenvolvimento do frontend, interface visual e continuidade do projeto;
+- Thalisson Freitas — desenvolvimento inicial do chatbot e do backend.
 
 Atualmente, o projeto está sendo mantido e desenvolvido por **Gabriela Vieira**, que está assumindo a evolução do backend e estudando novas possibilidades com Python e automação.
 
