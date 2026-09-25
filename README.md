@@ -8,9 +8,9 @@ O projeto foi criado como prática de desenvolvimento web, com o objetivo de apl
 
 ![Capa da Pizzaria Brasa d'Ouro](mockup-brasa-douro.png)
 
-Acesse a aplicação publicada:
-
-👉 [**Pizzaria Brasa d'Ouro**](https://projeto-pizzaria-rho.vercel.app/ )
+<div align="center">
+  <a href="https://projeto-pizzaria-rho.vercel.app/"><strong>🍕 Acessar Pizzaria Brasa d'Ouro</strong></a>
+</div>
 
 ## 🏠 Página inicial
 
